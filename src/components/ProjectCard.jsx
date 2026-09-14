@@ -21,14 +21,11 @@ export default function ProjectCard({ project }) {
         : Monitor;
 
   return (
-    <article className="relative z-10 flex min-h-[440px] w-full flex-col rounded-[18px] border border-[#a63d4066] bg-[#120d0c] p-4 sm:p-6">
+    <article className="relative z-10 flex min-h-[440px] w-full flex-col rounded-[18px] border border-[#a63d4066] bg-[#050505] p-4 transition duration-300 hover:-translate-y-1 hover:border-[#a63d40] hover:shadow-[0_16px_30px_-18px_#a63d40] sm:p-6">
       <div className="mb-6 flex items-center gap-3">
-        <div className="grid h-12 w-12 place-items-center rounded-xl border border-[#d77668]/50 bg-[linear-gradient(145deg,rgba(166,61,64,.35),rgba(10,10,10,.8))] text-[#e27667] shadow-[0_8px_22px_-12px_#a63d40]">
+        <div className="grid h-12 w-12 place-items-center rounded-xl border border-[#a63d4066] bg-[#0a0a0a] text-[#e27667]">
           <Icon size={24} strokeWidth={1.7} />
         </div>
-        <span className="font-mono text-xs text-[#f5f2ed94]">
-          {project.number}
-        </span>
         <span
           className={`ml-auto rounded-full border px-2.5 py-1 text-xs ${badge.tone === "live" ? "border-green-400/30 text-green-400" : badge.tone === "private" ? "border-violet-300/30 text-violet-300" : "border-amber-400/30 text-amber-400"}`}
         >

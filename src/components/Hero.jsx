@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { scrollToId } from "../lib/scroll.js";
@@ -15,7 +16,51 @@ const STACK_LINES = [
   { k: "while", v: "learning" },
 ];
 
+const HERO_ROLES = [
+  "Full-Stack Developer",
+  "Problem Solver",
+  "React Developer",
+  "AI/ML Developer",
+  "Backend & API Builder",
+];
+
 export default function Hero() {
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [typedRole, setTypedRole] = useState("");
+  const [isDeletingRole, setIsDeletingRole] = useState(false);
+
+  useEffect(() => {
+    const currentRole = HERO_ROLES[roleIndex];
+    const roleIsComplete = typedRole === currentRole;
+    const roleIsEmpty = typedRole === "";
+    const typingDelay =
+      roleIsComplete && !isDeletingRole
+        ? 1000
+        : roleIsEmpty && isDeletingRole
+          ? 250
+          : isDeletingRole
+            ? 45
+            : 85;
+
+    const timer = window.setTimeout(() => {
+      if (!isDeletingRole) {
+        const nextRole = currentRole.slice(0, typedRole.length + 1);
+        setTypedRole(nextRole);
+        if (nextRole === currentRole) setIsDeletingRole(true);
+        return;
+      }
+
+      const nextRole = currentRole.slice(0, typedRole.length - 1);
+      setTypedRole(nextRole);
+      if (nextRole === "") {
+        setIsDeletingRole(false);
+        setRoleIndex((currentIndex) => (currentIndex + 1) % HERO_ROLES.length);
+      }
+    }, typingDelay);
+
+    return () => window.clearTimeout(timer);
+  }, [isDeletingRole, roleIndex, typedRole]);
+
   return (
     <section
       id="home"
@@ -31,7 +76,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 opacity-35 [background-image:linear-gradient(rgba(255,255,255,.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.025)_1px,transparent_1px)] [background-size:64px_64px]" />
       <div className="relative z-10 mx-auto grid w-full max-w-[1180px] items-center gap-10 sm:gap-14 lg:grid-cols-[1.05fr_.95fr]">
         <motion.div
-          className="w-full max-w-xl"
+          className="w-full max-w-xl lg:-translate-y-20"
           initial="hidden"
           animate="visible"
           variants={{ visible: { transition: { staggerChildren: 0.12 } } }}
@@ -85,28 +130,35 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p
-            className="mb-5 text-[1.05rem] font-medium text-[#d7a08f] sm:text-[1.2rem]"
+            className="mb-5 min-h-[1.8rem] text-[1.05rem] font-medium text-[#d7a08f] sm:text-[1.2rem]"
             variants={{
               hidden: { opacity: 0, y: 18 },
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
-            Full-Stack Developer{" "}
-            <span className="mx-1 text-[#f5f2ed94]">|</span> AI/ML Developer
+            <span aria-live="polite">{typedRole}</span>
+            <span
+              className="ml-1 animate-pulse text-[#f5f2ed94]"
+              aria-hidden="true"
+            >
+              |
+            </span>
           </motion.p>
 
           <motion.p
-            className="mb-8 max-w-[480px] text-base leading-relaxed text-[#f5f2edc2] sm:text-[1.02rem]"
+            className="mb-8 max-w-[500px] text-base leading-relaxed text-[#f5f2edc2] sm:text-[1.02rem]"
             variants={{
               hidden: { opacity: 0, y: 16 },
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
-            I build responsive web applications, full-stack solutions, and
-            AI-powered experiences that turn ideas into practical digital
-            products.
+            I design and build fast, scalable digital experiences for brands,
+            founders, and teams who need clean interfaces, reliable product
+            logic, and AI-enhanced workflows that actually work in the real
+            world. My work brings together responsive frontend development,
+            practical backend integrations, and thoughtful user experiences.
           </motion.p>
 
           <motion.div
@@ -133,7 +185,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          className="w-full max-w-[560px] justify-self-center lg:max-w-none"
+          className="w-full max-w-[560px] justify-self-center lg:-translate-y-10 lg:max-w-none"
           initial={{ opacity: 0, y: 30, rotateX: 6 }}
           animate={{ opacity: 1, y: 0, rotateX: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}

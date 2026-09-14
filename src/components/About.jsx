@@ -55,21 +55,27 @@ export default function About() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, delay: 0.1 }}
         >
-          <div className="mb-5 inline-flex items-center gap-3 text-xs text-[#f5f2ed94]">
+          <div className="mb-5 inline-flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-[#d7a08f]">
+            <span className="inline-flex h-6 min-w-6 items-center justify-center rounded border border-[#a63d40]/70 bg-[#a63d40]/10 px-1.5 text-[#d7a08f]">
+              02
+            </span>
             <span className="h-px w-6 bg-[#a63d40]" />
-            Get to know me
+            <span>Get to know me</span>
           </div>
           <h2 className="max-w-[590px] text-[clamp(2.4rem,4vw,4rem)] font-bold leading-[1] tracking-[-0.05em] text-[#f5f2ed]">
-            Turning Ideas into{" "}
+            Turning ideas into{" "}
             <em className="font-serif font-normal text-[#a63d40]">
-              Real Products.
+              real products.
             </em>
           </h2>
+          <p className="mt-5 max-w-[520px] font-serif text-[clamp(1.2rem,2vw,1.55rem)] italic leading-tight text-[#d7a08f]">
+            Thoughtful code. Meaningful experiences.
+          </p>
           <p className="mt-7 max-w-[590px] text-base leading-[1.8] text-[#f5f2edc2] sm:text-[1.04rem]">
-            I'm a full-stack developer who enjoys building web applications,
-            exploring AI/ML, and solving real problems with clean code and
-            considered design. I like learning new tools, working on meaningful
-            projects, and shipping things that actually get used.
+            I’m a full-stack developer who enjoys building responsive web apps,
+            AI-powered experiences, and practical digital products that solve
+            real problems. I care about clean architecture, thoughtful UX, and
+            shipping work that feels polished, useful, and easy to use.
           </p>
 
           <div className="mt-11 grid grid-cols-1 gap-4 sm:grid-cols-3">

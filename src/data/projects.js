@@ -4,7 +4,6 @@
 
 export const PROJECTS = [
   {
-    number: "01",
     id: "enrich-e-account",
     title: "Enrich E Account",
     category: "In-House Application",
@@ -26,7 +25,6 @@ export const PROJECTS = [
     status: "private",
   },
   {
-    number: "02",
     id: "9-influencers",
     title: "9 Influencers",
     category: "Live Website",
@@ -48,7 +46,6 @@ export const PROJECTS = [
     status: "live",
   },
   {
-    number: "03",
     id: "meeraxu-intelligence",
     title: "Meeraxu Intelligence",
     category: "Full-Stack Web Application",
@@ -72,7 +69,6 @@ export const PROJECTS = [
     status: "live",
   },
   {
-    number: "04",
     id: "kisan251",
     title: "Kisan251",
     category: "In Development",

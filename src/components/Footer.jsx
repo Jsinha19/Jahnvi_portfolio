@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-[1120px] flex-wrap items-center justify-between gap-6">
         <div className="flex gap-4 text-[#f5f2edc2]">
           <a
-            href="https://github.com/jahnvisinha"
+            href="https://github.com/Jsinha19"
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub"
@@ -14,14 +14,14 @@ export default function Footer() {
             <Github size={18} />
           </a>
           <a
-            href="https://linkedin.com/in/jahnvisinha"
+            href="https://www.linkedin.com/in/jahnvi-sinha-b02468219"
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn"
           >
             <Linkedin size={18} />
           </a>
-          <a href="mailto:hello@jahnvisinha.dev" aria-label="Email">
+          <a href="mailto:jahnvi.sinha19@gmaail.com" aria-label="Email">
             <Mail size={18} />
           </a>
         </div>

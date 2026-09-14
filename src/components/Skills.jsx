@@ -24,16 +24,21 @@ export default function Skills() {
     >
       <div className="mx-auto max-w-[1240px]">
         <div className="mb-12">
-          <div className="mb-4 inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[.14em] text-[#a63d40]">
+          <div className="mb-4 inline-flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-[#d7a08f]">
+            <span className="inline-flex h-6 min-w-6 items-center justify-center rounded border border-[#a63d40]/70 bg-[#a63d40]/10 px-1.5 text-[#d7a08f]">
+              04
+            </span>
             <span className="h-px w-10 bg-[#a63d40]" />
             <span>MY TOOLBOX</span>
           </div>
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-            <h2 className="text-[clamp(2.3rem,4vw,4rem)] font-bold leading-[1] tracking-[-0.06em] text-[#a63d40]">
-              Skills
+            <h2 className="text-[clamp(2.4rem,4vw,4rem)] font-bold leading-[1] tracking-[-0.06em]">
+              <span className="text-[#f5f2ed]">Skills</span>{" "}
+              <span className="text-[#a63d40]">&amp; Stack</span>
             </h2>
             <p className="max-w-[360px] text-base leading-relaxed text-[#f5f2ed] opacity-80 md:text-right">
-              Technologies I work with to bring ideas to life.
+              Technologies I use to build polished, scalable digital
+              experiences.
             </p>
           </div>
         </div>
@@ -61,7 +66,7 @@ export default function Skills() {
                 <div className="mt-1 flex flex-wrap gap-2">
                   {group.items.map((item) => (
                     <span
-                      className="inline-flex items-center justify-center whitespace-nowrap rounded-md border border-[#b89a8952] bg-white/[.02] px-2.5 py-1.5 text-xs text-[#f5f2ed]"
+                      className="inline-flex max-w-full items-center justify-center break-words rounded-md border border-[#b89a8952] bg-white/[.02] px-2.5 py-1.5 text-xs text-[#f5f2ed]"
                       key={item}
                     >
                       {item}
