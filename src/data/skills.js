@@ -1,0 +1,56 @@
+export const SKILL_GROUPS = [
+  {
+    key: "fullstack",
+    label: "Full-Stack Development",
+    file: "fullstack.js",
+    items: [
+      "MERN Stack",
+      "REST APIs",
+      "API Integration",
+      "Authentication",
+      "CRUD Operations",
+      "Responsive Design",
+      "UI/UX Design",
+    ],
+  },
+  {
+    key: "ai",
+    label: "AI / Machine Learning",
+    file: "ai-ml.py",
+    items: [
+      "Python",
+      "Data Science / Machine Learning",
+      "LLM Integration",
+      "RAG",
+      "Chatbot Development",
+      "Prompt Engineering",
+    ],
+  },
+  {
+    key: "tools",
+    label: "Tools & Technologies",
+    file: "tools.config",
+    items: [
+      "Git & GitHub",
+      "Postman",
+      "VS Code",
+      "Dashboard Development",
+      "Deployment & Hosting",
+      "Vercel",
+      "Render",
+    ],
+  },
+  {
+    key: "other",
+    label: "Other Skills",
+    file: "process.md",
+    items: [
+      "SEO",
+      "Manual Testing",
+      "Test Case & Scenario Writing",
+      "Bug Reporting & Tracking",
+      "Jira",
+      "Client / Team Coordination",
+    ],
+  },
+];

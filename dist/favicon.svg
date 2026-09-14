@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="JS logo">
+  <rect width="128" height="128" rx="22" fill="#0a0a0a"/>
+  <path d="M34 34h22l18 27 18-27h22v60H92V67L74 94H54L36 67v27H34V34Z" fill="#f5f2ed"/>
+  <path d="M95 31 78 54h19l17-23h-19Z" fill="#a63d40"/>
+  <path d="M31 31 48 54H29L12 31h19Z" fill="#a63d40"/>
+</svg>
