@@ -39,7 +39,7 @@ export default function App() {
         }}
       />
       <div
-        className="pointer-events-none fixed inset-0 z-[1] transition-opacity duration-200"
+        className="pointer-events-none fixed inset-0 z-1 transition-opacity duration-200"
         style={{
           background:
             "radial-gradient(circle 78px at var(--pointer-x) var(--pointer-y), rgba(180,83,69,.14), transparent 100%)",

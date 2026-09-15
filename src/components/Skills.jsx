@@ -48,7 +48,7 @@ export default function Skills() {
 
             return (
               <motion.div
-                className="flex min-h-[190px] flex-col rounded-xl border border-[#b89a89cc] bg-[radial-gradient(circle_at_85%_8%,rgba(166,61,64,.13),transparent_34%),linear-gradient(150deg,rgba(28,16,15,.98),#0a0a0a_58%)] p-5 transition duration-300 hover:-translate-y-2 hover:border-[#a63d40] hover:shadow-[0_18px_36px_-18px_#a63d40] lg:min-h-[250px]"
+                className="flex min-h-47.5 flex-col rounded-xl border border-[#b89a89cc] bg-[radial-gradient(circle_at_85%_8%,rgba(166,61,64,.13),transparent_34%),linear-gradient(150deg,rgba(28,16,15,.98),#0a0a0a_58%)] p-5 transition duration-300 hover:-translate-y-2 hover:border-[#a63d40] hover:shadow-[0_18px_36px_-18px_#a63d40] lg:min-h-[250px]"
                 key={group.key}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}

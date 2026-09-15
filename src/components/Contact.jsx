@@ -44,7 +44,7 @@ export default function Contact() {
           <div className="min-w-0">
             <small className="mb-1 block text-xs text-[#f5f2edb3]">Email</small>
             <span className="block break-all text-base">
-              jahnvi.sinha19@gmaail.com
+              jahnvi.sinha19@gmail.com
             </span>
           </div>
         </a>
