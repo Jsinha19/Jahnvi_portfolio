@@ -39,7 +39,7 @@ export default function About() {
             </div>
             <img
               className="absolute inset-0 z-10 h-full w-full object-cover object-top"
-              src="/images/jahnvi-sinha.jpg"
+              src="/images/jahnvi1.jpg"
               alt="Jahnvi Sinha"
               onError={(event) => {
                 event.currentTarget.style.display = "none";

@@ -35,12 +35,12 @@ export default function Hero() {
     const roleIsEmpty = typedRole === "";
     const typingDelay =
       roleIsComplete && !isDeletingRole
-        ? 1000
+        ? 1600
         : roleIsEmpty && isDeletingRole
-          ? 250
+          ? 350
           : isDeletingRole
-            ? 45
-            : 85;
+            ? 65
+            : 130;
 
     const timer = window.setTimeout(() => {
       if (!isDeletingRole) {

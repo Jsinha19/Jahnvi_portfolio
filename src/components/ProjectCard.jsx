@@ -67,7 +67,7 @@ export default function ProjectCard({ project }) {
 
       <div className="flex flex-col gap-2 sm:flex-row sm:flex-nowrap">
         <a
-          className="inline-flex min-w-0 flex-1 items-center justify-center gap-1 rounded-lg border border-[#a63d40] bg-[#a63d40] px-2 py-2.5 text-center text-[.68rem] font-medium leading-tight text-[#f5f2ed] shadow-[0_12px_28px_-16px_#a63d40] transition hover:-translate-y-0.5 hover:bg-[#0a0a0a] hover:text-[#a63d40]"
+          className={`inline-flex min-w-0 flex-1 items-center justify-center gap-1 rounded-lg border border-[#a63d40] bg-[#a63d40] px-2 py-2.5 text-center text-[.68rem] font-medium leading-tight text-[#f5f2ed] shadow-[0_12px_28px_-16px_#a63d40] ${project.linkLabel === "Private / In-House Project" ? "" : "transition hover:-translate-y-0.5 hover:bg-[#0a0a0a] hover:text-[#a63d40]"}`}
           href={project.link}
           target={project.link !== "#" ? "_blank" : undefined}
           rel="noreferrer"
@@ -76,13 +76,15 @@ export default function ProjectCard({ project }) {
           }}
         >
           {project.linkLabel === "Private / In-House Project"
-            ? "Explore Project"
+            ? "Live URL unavailable - in-house application"
             : project.linkLabel}{" "}
-          <ArrowUpRight size={14} />
+          {project.linkLabel !== "Private / In-House Project" && (
+            <ArrowUpRight size={14} />
+          )}
         </a>
         {project.secondaryLink && (
           <a
-            className="inline-flex min-w-0 flex-1 items-center justify-center gap-1 rounded-lg border border-[#a63d40] bg-[#0a0a0a] px-2 py-2.5 text-center text-[.68rem] font-medium leading-tight text-[#f5f2ed] transition hover:-translate-y-0.5 hover:bg-[#0a0a0a] hover:text-[#a63d40]"
+            className={`inline-flex min-w-0 flex-1 items-center justify-center gap-1 rounded-lg border border-[#a63d40] bg-[#0a0a0a] px-2 py-2.5 text-center text-[.68rem] font-medium leading-tight text-[#f5f2ed] ${project.secondaryLabel === "Private Admin Panel" ? "" : "transition hover:-translate-y-0.5 hover:bg-[#0a0a0a] hover:text-[#a63d40]"}`}
             href={project.secondaryLink}
             onClick={(e) => e.preventDefault()}
           >

@@ -5,6 +5,8 @@ export const SKILL_GROUPS = [
     file: "fullstack.js",
     items: [
       "MERN Stack",
+      "JavaScript",
+      "Tailwind CSS",
       "REST APIs",
       "API Integration",
       "Authentication",
